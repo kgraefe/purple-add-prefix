@@ -32,7 +32,12 @@ install: $(PLUGIN).so
 uninstall:
 	rm -f $(PLUGIN_DIR)/$(PLUGIN).so
 
-clean:
-	rm -f $(PLUGIN).so
+dist: $(PLUGIN)-$(VERSION).tar.gz
 
-.PHONY: all install uninstall clean
+$(PLUGIN)-$(VERSION).tar.gz: COPYING README.md Makefile plugin.c
+	tar -c -s '#^#$(PLUGIN)-$(VERSION)/#g' -z -f $@ $+
+
+clean:
+	rm -f $(PLUGIN).so $(PLUGIN)-*.tar.gz
+
+.PHONY: all install uninstall clean dist
