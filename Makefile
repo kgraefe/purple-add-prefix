@@ -34,7 +34,7 @@ uninstall:
 
 dist: $(PLUGIN)-$(VERSION).tar.gz
 
-$(PLUGIN)-$(VERSION).tar.gz: COPYING README.md Makefile plugin.c
+$(PLUGIN)-$(VERSION).tar.gz: COPYING README.md CHANGES.md Makefile plugin.c
 	tar -c -s '#^#$(PLUGIN)-$(VERSION)/#g' -z -f $@ $+
 
 clean:
