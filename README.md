@@ -29,7 +29,7 @@ the plugin you need to extract a relase tarball and compile it from source:
 
     ```
     mkdir -p ~/.purple/plugins
-    cp addprefix.so ~/.purple/plugins/
+    cp purple-add-prefix.so ~/.purple/plugins/
     ```
 
 [1]: https://brew.sh

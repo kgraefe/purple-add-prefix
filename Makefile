@@ -1,4 +1,4 @@
-PLUGIN=addprefix
+PLUGIN=purple-add-prefix
 VERSION=1.0
 
 -include local.mak
