@@ -15,6 +15,8 @@ CFLAGS+=-DADD_PREFIX='"$(ADD_PREFIX)"'
 endif
 
 CFLAGS+=-Wall -Werror-implicit-function-declaration
+CFLAGS+=-Wno-deprecated-declarations
+CFLAGS+=-Wno-\#pragma-messages
 CFLAGS+=$(shell pkg-config purple --cflags)
 
 LDFLAGS+=$(shell pkg-config purple --libs)
